@@ -1,0 +1,6 @@
+<application>
+  <component name="JUnitGeneratorAppSettings">
+    <option name="outputFilePattern" value="${SOURCEPATH}/src/${com.springtest.main}/${Test}" />
+    <option name="selectedTemplateKey" value="JUnit 4" />
+  </component>
+</application>
