@@ -38,4 +38,19 @@ public class UtilTest {
         char[] ch = Integer.toBinaryString(n).toCharArray();
         System.out.println(ch);
     }
+
+    @Test
+    /**
+     * 测试double的精度问题
+     */
+    public void doubleTest(){
+        double a1 = 0.9;
+        double a2 = 0.9;
+        //精度问题，因此比较两个浮点数的值不能用if(num1 == num2)
+        System.out.println(a1-0.1-0.1);
+        System.out.println(a2 - 0.2);
+        System.out.println((a1 - 0.1 - 0.1) == (a2 - 0.2));
+        System.out.println(a1);
+
+    }
 }
