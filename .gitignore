@@ -4,6 +4,7 @@ jdbc.properties
 /.idea
 /out
 *.iml
+*.xml
 
 #编译文件
 *.class
