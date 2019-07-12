@@ -67,5 +67,10 @@ public class Test16 {
         System.out.println(power(2, -4));
         System.out.println(power(2, 4));
         System.out.println(power(2, 0));
+        System.out.println(power(0.00000000000000000000000000001, -1));
+        System.out.println(power(0.00000000000000000000000000001, 1));
+        System.out.println(power(0.00000000000000000000000000001, 0));
+        System.out.println(power(0.00000000000000000000000000000, 0));
+
     }
 }
