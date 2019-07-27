@@ -2,5 +2,7 @@
   <component name="Registry">
     <entry key="git.explicit.commit.renames.prohibit.multiple.calls" value="false" />
     <entry key="compiler.automake.allow.when.app.running" value="true" />
+    <entry key="compiler.document.save.trigger.delay" value="100" />
+    <entry key="compiler.automake.trigger.delay" value="100" />
   </component>
 </application>
