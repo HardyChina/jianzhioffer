@@ -75,7 +75,7 @@ public class Test17 {
     }
 
     public static void main(String[] args) {
-        print1ToMaxOfDigits(2);
+        print1ToMaxOfDigits(32);
     }
 
 
