@@ -69,6 +69,7 @@ public class Test18 {
                 node = next;
             }
         }
+        System.gc();
         return head;
     }
 

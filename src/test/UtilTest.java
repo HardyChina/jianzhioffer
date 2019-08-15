@@ -2,6 +2,10 @@ package test;
 
 import org.junit.Test;
 
+import java.util.Arrays;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
 
 public class UtilTest {
 
@@ -53,4 +57,22 @@ public class UtilTest {
         System.out.println(a1);
 
     }
+        @Test
+        /**
+         * 正则表达式测试
+         */
+        public void rexTest() {
+            String[] strs = {"aaa","???","aaa??","exe.exe"};
+            String pattern = "^[a-zA-Z0-9\\u4e00-\\u9fa5]+$";
+
+            Pattern r = Pattern.compile(pattern);
+            for (String str:
+                 strs) {
+                Matcher m = r.matcher(str);
+                System.out.println(m.matches());
+            }
+
+        }
+
+
 }
