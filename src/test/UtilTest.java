@@ -62,8 +62,9 @@ public class UtilTest {
          * 正则表达式测试
          */
         public void rexTest() {
-            String[] strs = {"aaa","???","aaa??","exe.exe"};
-            String pattern = "^[a-zA-Z0-9\\u4e00-\\u9fa5]+$";
+            String[] strs = {"123","1a3.14","???","aaa??","exe.exe"};
+            // String pattern = "^[a-zA-Z0-9\\u4e00-\\u9fa5]+$";
+            String pattern = "^[0-9]+$";
 
             Pattern r = Pattern.compile(pattern);
             for (String str:
