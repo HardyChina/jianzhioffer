@@ -42,6 +42,7 @@ public class Test11 {
      * @return
      */
     public static int minOrder(int[] data){
+        // Arrays.stream(data)返回一个IntStream对象，boxed将int转为Ineger，collect通过Collectors，将stream转换为list对象
         List<Integer> list = Arrays.stream(data).boxed().collect(Collectors.toList());
         IntSummaryStatistics statistics = list.stream().mapToInt(x->x).summaryStatistics();
         return statistics.getMin();
