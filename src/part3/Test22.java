@@ -1,4 +1,7 @@
 package part3;
+
+import common.ListNode;
+
 /**
  * 输入一个链表，输出该链表中倒数第k个结点。
  * @author 李震寰
@@ -10,7 +13,7 @@ public class Test22 {
      * @param k
      * @return
      */
-    public static ListNode findKthToTail(ListNode head,int k) {
+    public static ListNode findKthToTail(ListNode head, int k) {
         if (head == null || k <= 0){
             return null;
         }

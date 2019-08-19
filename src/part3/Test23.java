@@ -1,4 +1,7 @@
 package part3;
+
+import common.ListNode;
+
 /**
  * 链表中环的入口节点
  * @author lzh

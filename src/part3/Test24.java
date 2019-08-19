@@ -1,5 +1,7 @@
 package part3;
 
+import common.ListNode;
+
 /**
  * 反转链表
  * @author lzh

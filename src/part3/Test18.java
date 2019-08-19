@@ -1,5 +1,7 @@
 package part3;
 
+import common.ListNode;
+
 /**
  * 链表的删除
  * @author 10592
@@ -78,12 +80,5 @@ public class Test18 {
         ListNode next  = new ListNode(1);
         head.next = next;
         System.out.println(deleteDuplication(head));
-    }
-}
-class ListNode{
-    int val;
-    ListNode next;
-    ListNode(int val) {
-        this.val = val;
     }
 }
