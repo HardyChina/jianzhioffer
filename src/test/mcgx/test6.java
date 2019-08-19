@@ -109,4 +109,5 @@ public class test6 {
         Object obj = strings;
         System.out.println(((String[])obj)[0]);
     }
+
 }
