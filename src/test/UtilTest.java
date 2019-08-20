@@ -2,9 +2,13 @@ package test;
 
 import org.junit.Test;
 
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
+import java.util.stream.Collector;
+import java.util.stream.Collectors;
 
 
 public class UtilTest {
@@ -73,6 +77,12 @@ public class UtilTest {
                 System.out.println(m.matches());
             }
 
+        }
+        @Test
+    public void indexTest(){
+            int[] push = {1,2,3,4,5};
+             int index = Arrays.stream(push).boxed().collect(Collectors.toList()).indexOf(4);
+            System.out.println(index);
         }
 
 
