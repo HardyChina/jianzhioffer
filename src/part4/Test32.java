@@ -13,14 +13,16 @@ public class Test32 {
 
     /**
      * 通过队列作为容器，来实现层序遍历
+     * 要点：queue的使用，队列中放的时Treenode而不是val否则无法完成左右子树的遍历
      * @param root
      * @return
      */
     public static ArrayList<Integer> printFromTopToBottom(TreeNode root) {
-        if (root == null ){
-            return null;
-        }
         ArrayList<Integer> list = new ArrayList<>();
+        if (root == null ){
+            return list;
+        }
+
         Queue<TreeNode> queue = new LinkedList<>();
         queue.offer(root);
         while (!queue.isEmpty()){
