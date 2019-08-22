@@ -84,6 +84,16 @@ public class UtilTest {
              int index = Arrays.stream(push).boxed().collect(Collectors.toList()).indexOf(4);
             System.out.println(index);
         }
+    /**
+     * 测试System.arraycopy
+     */
+    @Test
+    public void arraycopyTest(){
+        int[] sequence1 = {5, 7, 6, 9, 11, 10 ,8};
+        int[] subSquence = new int[sequence1.length - 3 -1];
+        System.arraycopy(sequence1, 3 , subSquence , 0, 3);
+        Arrays.stream(subSquence).boxed().forEach(System.out::print);
+    }
 
 
 }
