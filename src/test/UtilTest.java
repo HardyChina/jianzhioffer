@@ -94,6 +94,11 @@ public class UtilTest {
         System.arraycopy(sequence1, 3 , subSquence , 0, 3);
         Arrays.stream(subSquence).boxed().forEach(System.out::print);
     }
+    @Test
+    public void testSplit(){
+        String str = "";
+        System.out.print(str.split(",").length);
+    }
 
 
 }

@@ -3,6 +3,7 @@ package test.mcgx;
 import org.junit.Test;
 
 import java.util.concurrent.*;
+import java.util.concurrent.locks.ReentrantLock;
 
 public class test7 {
 
