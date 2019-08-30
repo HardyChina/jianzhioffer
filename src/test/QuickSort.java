@@ -45,6 +45,12 @@ public class QuickSort {
                 if (data[small] != data[index]){
                     swap(data, small, index);
                 }
+                else {
+                    //System.out.println(data[end]);
+                    System.out.println("small"+small);
+                    System.out.println(data[small]);
+                    System.out.println("index"+index);
+                }
             }
         }
         //将原本在end位置上的被选中点回到正确的位置
@@ -61,17 +67,17 @@ public class QuickSort {
      * @param index2
      */
     public static void swap(int[] data, int index1, int index2){
-        data[index1] ^= data[index2];
-        data[index2] ^= data[index1];
-        data[index1] ^= data[index2];
+        int tem = data[index1];
+        data[index1] = data[index2];
+        data[index2] = tem;
     }
 
     public static void main(String[] args) {
-        int[] data = {1,5,3,2,4,7,9};
+        int[] data = {1,5,3,2,4,3,7,9,4};
         quickSort(data, data.length, 0, data.length-1);
         for (int i:
              data) {
-            System.out.println(i);
+            System.out.print(i);
 
         }
 
