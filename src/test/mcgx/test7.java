@@ -5,6 +5,10 @@ import org.junit.Test;
 import java.util.concurrent.*;
 import java.util.concurrent.locks.ReentrantLock;
 
+/**
+ * junit4不支持多线程，这样写不好
+ *
+ */
 public class test7 {
 
     private static  volatile long count = 0L;
@@ -147,7 +151,7 @@ public class test7 {
                 System.out.println(this.getName()+"线程是"+threadLocal.get());
             }
         }
-        for (int i = 0; i < 2 ; i++) {
+        for (int i = 0; i < 5 ; i++) {
             pool.execute(new ThreadLocalTest());
 
         }
