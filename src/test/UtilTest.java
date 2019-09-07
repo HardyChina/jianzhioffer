@@ -1,5 +1,6 @@
 package test;
 
+import common.TreeNode;
 import org.junit.jupiter.api.Test;
 
 import java.util.ArrayList;
@@ -98,6 +99,12 @@ public class UtilTest {
     public void testSplit(){
         String str = "";
         System.out.print(str.split(",").length);
+    }
+    @Test
+    public void classTest(){
+        Class<TreeNode> treeNodeClass1 = TreeNode.class;
+        Class<TreeNode> treeNodeClass2 = TreeNode.class;
+        System.out.println(treeNodeClass1 == treeNodeClass2);
     }
 
 
