@@ -7,16 +7,16 @@ import java.util.Arrays;
  * @author lzh
  */
 public class QuickSort {
-    public static void quickSort(int[] data, int length, int start, int end){
+    public static void sort(int[] data, int length, int start, int end){
         if (start >= end) {
             return;
         }
         int index = partition(data,data.length,start,end);
         if (index > start){
-            quickSort(data,length,start,index - 1);
+            sort(data,length,start,index - 1);
         }
         if (index < end){
-             quickSort(data,length,index + 1,end);
+             sort(data,length,index + 1,end);
         }
 
 
@@ -54,7 +54,7 @@ public class QuickSort {
     }
     public static void main(String[] args) {
         int[] data = {1,5,3,2,4,3,7,9,4};
-        quickSort(data, data.length, 0, data.length - 1);
+        sort(data, data.length, 0, data.length - 1);
         Arrays.stream(data).forEach(System.out::print);
     }
 
