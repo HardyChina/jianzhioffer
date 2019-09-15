@@ -16,7 +16,7 @@ public class Test24 {
         if (head == null){
             return null;
         }
-        ListNode reverseList = head;
+        ListNode reverseList = null;
         ListNode node = head;
         ListNode pre = null;
 

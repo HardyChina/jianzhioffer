@@ -30,14 +30,18 @@ public class Test17 {
         // 每循环一次，i所在的位数进行一次加1运算，每次都从第一位加起
         for (int i = arr.length - 1; i >= 0; i--) {
             int sum = arr[i] + nTakeOver;
+            // 只有个位时+1
             if (i == arr.length-1){
                 sum++;
             }
+
             if (sum >= 10){
+                // 最高位+1时完成
                 if (i == 0){
                     finished = true;
                 }
                 else {
+                    // 进位操作
                     sum -= 10;
                     nTakeOver = 1;
                     arr[i] = sum;

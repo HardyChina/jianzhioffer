@@ -35,7 +35,7 @@ public class Test21 {
     }
 
     /**
-     * 剑指offer的实现方法，注意可以使用策略魔兽扩展判断条件,但奇数和偶数的相对位置会改变
+     * 剑指offer的实现方法，注意可以使用策略模式扩展判断条件,但奇数和偶数的相对位置会改变
      * @param array
      */
     public static void reOrderArray2(int [] array) {

@@ -11,7 +11,7 @@ public class Test31 {
         if(pushA.length == 0 || popA.length == 0) {
             return false;
         }
-        Stack<Integer> stack = new Stack<Integer>();
+        Stack<Integer> stack = new Stack<>();
         int popIndex = 0;
         for (int i = 0; i < pushA.length; i++) {
             stack.push(pushA[i]);

@@ -21,10 +21,11 @@ public class Test34 {
         target -= root.val;
         // 如果是叶节点且符合要求
         if (target == 0 && root.right == null && root.left == null){
-            lists.add(new ArrayList<Integer>(list));
+            lists.add(new ArrayList<>(list));
         }
         FindPath(root.left,target);
         FindPath(root.right,target);
+        // 执行完回退一步
         list.remove(list.size() -1);
         return lists;
     }
