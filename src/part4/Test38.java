@@ -16,6 +16,7 @@ public class Test38 {
             return list;
         }
          PermutationHelper(str.toCharArray(), list, 0);
+        // 按字典序排列
         Collections.sort(list);
         return list;
 
@@ -25,14 +26,16 @@ public class Test38 {
 
     private static void PermutationHelper(char[] chars,ArrayList<String> list,int i){
        if (i == chars.length -1){
+           // 防止重复值
            if (!list.contains(String.valueOf(chars))) {
                list.add(String.valueOf(chars));
            }
        }
        else {
            for (int j = i; j < chars.length; j++) {
-               swap(chars,i,j);
+               swap(chars, i, j);
                PermutationHelper(chars,list,i+1);
+               // 之所以要进行两次交换，是为了不影响循环交换的顺序
                swap(chars, i ,j);
            }
        }

@@ -106,6 +106,12 @@ public class UtilTest {
         Class<TreeNode> treeNodeClass2 = TreeNode.class;
         System.out.println(treeNodeClass1 == treeNodeClass2);
     }
-
+    @Test
+    public  void  soutTest(){
+        System.out.println(3|9);
+        Integer t = null;
+        int m = t;
+        System.out.println(m);
+    }
 
 }
