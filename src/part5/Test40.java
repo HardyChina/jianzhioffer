@@ -2,8 +2,11 @@ package part5;
 
 import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.Comparator;
+import java.util.PriorityQueue;
 
 import static java.lang.System.currentTimeMillis;
+import static java.lang.System.in;
 
 
 /**
@@ -14,6 +17,9 @@ public class Test40 {
     public static ArrayList<Integer> GetLeastNumbers_Solution(int [] input, int k) {
 
         ArrayList<Integer> list = new ArrayList<>();
+        if (k > input.length){
+            return list;
+        }
         if (input == null || k == 0){
             return list;
         }
@@ -74,6 +80,45 @@ public class Test40 {
         return list;
     }
 
+    /**
+     * 使用最大堆解决问题
+     * @param input
+     * @param k
+     * @return
+     */
+    public static ArrayList<Integer> GetLeastNumbers_Solution3(int [] input, int k) {
+        ArrayList<Integer> list = new ArrayList<>(k);
+        if (k > input.length){
+            return list;
+        }
+        if (input == null || k == 0){
+            return list;
+        }
+        // 默认自然序列，为小顶堆，因此需要重写compare方法，实现大顶堆
+        PriorityQueue<Integer> maxHeap = new PriorityQueue<>(k,new Comparator<Integer>(){
+            @Override
+            public int compare(Integer o1, Integer o2){
+                return -o1.compareTo(o2);
+            }
+        });
+        for (int i = 0; i < input.length; i++) {
+            if (maxHeap.size() < k){
+                maxHeap.add(input[i]);
+            }
+            else {
+                if (maxHeap.peek() > input[i]){
+                    maxHeap.poll();
+                    maxHeap.add(input[i]);
+                }
+            }
+        }
+        for (Integer i :
+                maxHeap) {
+            list.add(i);
+        }
+        return list;
+    }
+
     public static void main(String[] args) {
        int[] input = {4,5,1,6,2,7,3,8};
        long start =  System.currentTimeMillis();
@@ -85,6 +130,8 @@ public class Test40 {
         long end2 = System.currentTimeMillis();
         System.out.println();
         System.out.println(end1 - end2);
+        GetLeastNumbers_Solution3(input,4).stream().forEach(System.out::print);
+
 
     }
 }
