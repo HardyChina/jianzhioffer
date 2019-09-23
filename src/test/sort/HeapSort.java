@@ -25,6 +25,8 @@ public class HeapSort {
 
     }
     private static void buildMaxHeap(int[] arr, int len) {
+
+        //len / 2后都是叶子节点
         for (int i = (int)Math.floor(len / 2); i >= 0; i--) {
             heapify(arr,i,len);
 
@@ -43,6 +45,7 @@ public class HeapSort {
         }
         if (largest!=i){
             swap(arr,largest,i);
+            // 此时largest指向的就是原来i指向的节点
             heapify(arr,largest,len);
         }
     }
