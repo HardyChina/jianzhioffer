@@ -156,4 +156,15 @@ public class test7 {
 
         }
     }
+    @Test
+    public void sumTest(){
+        int i = 0,j=0,sum=0;
+        for (i = 0; i < 100; i++) {
+            for (int k = 0; k < i; k++) {
+                sum = i + k;
+            }
+
+        }
+        System.out.println(sum);
+    }
 }
