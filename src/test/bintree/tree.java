@@ -148,7 +148,7 @@ public class tree {
             if (c.left!=null && root!=c.left && root!=c.right){
                 stack.push(c.left);
             }
-            // 打印了左节点，此时将有节点放入栈
+            // 打印了左节点，此时将右节点放入栈
             else if (c.right!=null && root!=c.right){
                 stack.push(c.right);
             }else {
